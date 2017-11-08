@@ -22,4 +22,4 @@ OnManagerWelcomeHome
 ****
 */
 // Run the main code
-include($modx->config['base_path'].'assets/plugins/dashboardlastwebusers/lastwebuser.php');
+include($modx->config['base_path'].'assets/plugins/dashboardrss/dashboardrss.php');
