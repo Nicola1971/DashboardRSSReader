@@ -1,6 +1,6 @@
 <?php
 /**
- * DashboardRSSReader RC 3.2.1
+ * DashboardRSSReader RC 3.2.2
  * author Nicola Lambathakis http://www.tattoocms.it/
  *
  * RSS Dashboard widget plugin for Evolution cms
@@ -94,6 +94,7 @@ if($e->name == ''.$EvoEvent.'') {
 				'menuindex' =>''.$wdgposition.'',
 				'id' => 'DashboardRSS'.$pluginid.'',
 				'cols' => 'col-md-'.$wdgsizex.'',
+				'cardAttr' => 'style="background-color:'.$BodyBG.'; color:'.$BodyColor.';"',
                 'headAttr' => 'style="background-color:'.$HeadBG.'; color:'.$HeadColor.';"',
 				'bodyAttr' => 'style="background-color:'.$BodyBG.'; color:'.$BodyColor.';"',
 				'icon' => ''.$wdgicon.'',
