@@ -99,7 +99,7 @@ else {
             'menuindex' =>''.$wdgposition.'',
             'id' => 'DashboardRSS'.$pluginid.'',
             'cols' => 'col-md-'.$wdgsizex.'',
-            'cardAttr' => 'style="background-color:'.$BodyBG.'; color:'.$BodyColor.';"',
+            'cardAttr' => 'style="background-color:'.$BodyBG.'; color:'.$BodyColor.'; padding-bottom:0.5rem;"',
             'headAttr' => 'style="background-color:'.$HeadBG.'; color:'.$HeadColor.';"',
             'bodyAttr' => 'style="background-color:'.$BodyBG.'; color:'.$BodyColor.'; max-height:'.$BodyHeight.'px;overflow-y: scroll; padding:0;"',
             'icon' => ''.$wdgicon.'',
