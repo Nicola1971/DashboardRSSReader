@@ -47,15 +47,17 @@ foreach ($urls as $section=>$url) {
         $title = $item->get_title();
         $pubdate = $item->get_date();
         $pubdate = $modx->toDateFormat(strtotime($pubdate));
-        $description .= strip_tags($item->get_content());
-        if (mb_strlen($description) > 199) {
-            preg_match('/^\s*+(?:\S++\s*+){1,15}/u', $description, $matches);
+        $description = strip_tags($item->get_content());
+        if (mb_strlen($description) > 300) {
+            preg_match('/^\s*+(?:\S++\s*+){1,25}/u', $description, $matches);
             if (isset($matches[0]) && mb_strlen($description) !== mb_strlen($matches[0])) {
                 $description = rtrim($matches[0]);
+                $descriptionmore = '...<br />Read <a href="' . $href . '" target="_blank">more</a>.';
             }
-            $description .= '...<br />Read <a href="' . $href . '" target="_blank">more</a>.';
+            
         }
-        $rssoutput .= '<li><a href="'.$href.'" target="_blank">'.$title.'</a> - <b>'.$pubdate.'</b><br />'.$description.'</li>';
+        
+        $rssoutput .= '<li><a href="'.$href.'" target="_blank">'.$title.'</a> - <b>'.$pubdate.'</b><br />'.$description.' '.$descriptionmore.'</li>';
     }
     $rssoutput .= '</ul>';
     $feedData[$section] = $rssoutput;
